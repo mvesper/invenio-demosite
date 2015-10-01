@@ -18,11 +18,17 @@
 # 59 Temple Place, Suite 330, Boston, MA 02D111-1307, USA.
 
 from invenio.base.config import PACKAGES as _PACKAGES
+from invenio.base.config import EXTENSIONS as _EXTENSIONS
 
 PACKAGES = [
     "invenio_demosite.base",
+    "invenio_demosite.ext.*",
     "invenio_demosite.modules.*",
 ] + _PACKAGES
+
+EXTENSIONS = _EXTENSIONS + [
+    'invenio_demosite.modules.formatter',
+]
 
 DEPOSIT_TYPES = [
     'invenio_demosite.modules.deposit.workflows.article.article',
