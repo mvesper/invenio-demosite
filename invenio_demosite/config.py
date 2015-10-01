@@ -22,7 +22,6 @@ from invenio.base.config import EXTENSIONS as _EXTENSIONS
 
 PACKAGES = [
     "invenio_demosite.base",
-    "invenio_demosite.ext.*",
     "invenio_demosite.modules.*",
 ] + _PACKAGES
 
