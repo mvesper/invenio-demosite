@@ -27,7 +27,7 @@ from invenio.modules.circulation.models import CirculationItem
 
 
 def has_items(record_id):
-    return CirculationItem.search(record_id=record_id)
+    return CirculationItem.search('record_id:{0}'.format(record_id))
 
 
 def encode_circulation_state(users, items, records, start_date, end_date):
